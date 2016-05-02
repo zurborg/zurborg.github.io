@@ -15,11 +15,12 @@ for centralized logging.
 ## Market analysis
 
 The first step was a very classical market analysis.  Besides syslog, I've
-first heard of Graylog, but I found some more solutions:
+first heard of [Graylog](http://graylog.com/), but I found some more
+solutions:
 
-* Logstash
-* Kafka
-* Scribe
+* [Logstash](https://www.elastic.co/products/logstash)
+* [Apache Kafka](https://kafka.apache.org/)
+* [Scribe](https://github.com/facebookarchive/scribe)
 
 Graylog was my favourite choice, and still is.  In my earlier days I worked
 at [bytemine](https://bytemine.net) together with [Bernd
@@ -69,15 +70,15 @@ I'm not going to do this. So I had to start a market analysis again.
 
 ## Reliable logging
 
-A technology to gain reliable queues is AMQP.  That is used by Apache Kakfa
-and RabbitMQ, for example.
+Two technologies gaining reliable queues are AMQP and Kafka, for example.
 
-Apache Kafka needs Java so that's out of the race.  RabbitMQ is written in
-Erlang (that's okay for me) but hard to configure.  I've looked at some
-other solutions, too, but they are either Java bloatware or really hard to
-configure.  Finally, I didn't managed it.  What I need is a really simple
-software, caching the GELF messages in a reliable queue, in order to push
-them into Graylog directly or wait until the server becomes available.
+Apache Kafka needs Java so it's out of the race.
+[RabbitMQ](https://www.rabbitmq.com/) is written in Erlang (that's okay for
+me) but hard to configure.  I've looked at some other solutions, too, but
+they are either Java bloatware or really hard to configure.  Finally, I
+didn't managed it.  What I need is a really simple software, caching the
+GELF messages in a reliable queue, in order to push them into Graylog
+directly or wait until the server becomes available.
 
 Time passes by and I worked on another project that heavily uses a Redis DB. 
 I read some notes about creating reliable queues in a Redis database using a
