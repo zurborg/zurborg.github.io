@@ -167,6 +167,8 @@ $message = [
 
 # Encode to JSON
 $gelf = json_encode($message);
+
+# Push to queue
 $redis->lPush('graylog-queue', $gelf);
 ```
 
