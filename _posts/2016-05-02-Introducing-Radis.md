@@ -200,8 +200,8 @@ A list of software I wrote (and published) for Radis:
 ## TODO
 
 * Publishing the rest of software I wrote, including:
-** `radis-daemon` which pipes messages form Redis DB to Graylog
-** `apache2radis` a log wrapper for Apache HTTPd
+  * `radis-daemon` which pipes messages form Redis DB to Graylog
+  * `apache2radis` a log wrapper for Apache HTTPd
 
 And last but not least I need feedback.  Do you like my idea?  Write me. 
 You wanna get involved?  Fork me at github.  Do you think that is all
