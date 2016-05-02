@@ -155,8 +155,10 @@ PHP is quite similiar, needs one depedency less (because JSON is already
 part of PHP):
 
 ```php
-# Connect to Redis DB
 $redis = new Redis();
+
+# Connect to Redis DB
+$redis->connect('localhost', 6379);
 
 # Build log message
 $message = [
